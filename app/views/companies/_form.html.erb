@@ -1,0 +1,55 @@
+<%= form_with(model: company, local: true) do |form| %>
+  <% if company.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(company.errors.count, "error") %> prohibited this company from being saved:</h2>
+
+      <ul>
+      <% company.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :company_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :country_id %>
+   
+    <%= form.select(:country_id, Country.all.collect {|u| [u.country_name, u.id]}, :prompt => 'Select') %>
+  </div>
+
+  <div class="field">
+    <%= form.label :state_id %>
+    <%= form.select(:state_id, State.all.collect {|u| [u.state_name, u.id]}, :prompt => 'Select') %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city_id %>
+    <%= form.select(:city_id, City.all.collect {|u| [u.city_name, u.id]}, :prompt => 'Select') %>
+  </div>
+
+ 
+
+  <div class="field">
+    <%= form.label :postcode %>
+    <%= form.text_field :postcode, id: :company_postcode %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start_date %>
+    <%= form.datetime_select :start_date, id: :company_start_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :active %>
+    <%= form.check_box :active, id: :company_active %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
