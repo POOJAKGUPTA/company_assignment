@@ -56,3 +56,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise', '~> 4.2'
 gem "rolify"
 gem 'activeadmin' ,'~> 1.3.0'
+gem 'carrierwave', '~> 1.0'

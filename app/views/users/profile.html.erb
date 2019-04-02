@@ -1,0 +1,50 @@
+<p> <id="notice"> <%= notice %></p>
+
+<%= image_tag current_user.image, size: 150 %>
+
+<p>
+  <strong>First Name</strong>
+  <%= @user.first_name %>
+</p>
+
+<p>
+  <strong>Last Name</strong>
+  <%= @user.last_name %>
+</p>
+
+
+
+<p>
+  <strong>Post code</strong>
+  <%= @user.postcode %>
+</p>
+
+
+<p>
+  <strong>Company Name</strong>
+  <%= @user.company_id %>
+</p>
+
+
+<p>
+  <strong>City Name</strong>
+  <%= @user.city_id %>
+</p>
+
+
+<p>
+  <strong>Start date</strong>
+  <%= @user.start_date %>
+</p>
+
+<p>
+  <strong>End date</strong>
+  <%= @user.end_date %>
+</p>
+
+<p>
+  <strong>Status</strong>
+  <%= @user.active %>
+</p>
+
+<%= link_to 'Back', root_path %>
