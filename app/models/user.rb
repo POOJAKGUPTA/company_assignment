@@ -6,4 +6,10 @@ class User < ApplicationRecord
 
     mount_uploader :image, AvatarUploader
 
+    belongs_to :city
+    belongs_to :company
+   
+
+   acts_as_commontator
+
 end

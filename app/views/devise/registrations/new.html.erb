@@ -23,12 +23,15 @@
 
   <div class="field">
     <%= f.label :company_id %><br />
-    <%= f.number_field :company_id %>
+    <%#= f.number_field :company_id %>
+    <%= f.select(:company_id, Company.all.collect {|u| [u.name, u.id]}, :prompt => 'Select') %>
+    
   </div>
 
    <div class="field">
     <%= f.label :city_id %><br />
-    <%= f.number_field :city_id %>
+    <%#= f.number_field :city_id %>
+  <%= f.select(:city_id, City.all.collect {|u| [u.city_name, u.id]}, :prompt => 'Select') %>
   </div>
 
    <div class="field">
@@ -49,6 +52,7 @@
    <div class="field">
     <%= f.label :active %><br />
      <%= f.check_box :active, id: :company_active %>
+
   </div>
 
    <div class="field">

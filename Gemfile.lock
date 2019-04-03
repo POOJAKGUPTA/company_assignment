@@ -80,6 +80,9 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
+    commontator (4.11.1)
+      jquery-rails
+      rails (>= 3.1)
     concurrent-ruby (1.1.5)
     crass (1.0.4)
     devise (4.6.1)
@@ -249,6 +252,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   carrierwave (~> 1.0)
   coffee-rails (~> 4.2)
+  commontator (~> 4.11.1)
   devise (~> 4.2)
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)

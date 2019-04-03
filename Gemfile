@@ -58,3 +58,4 @@ gem "rolify"
 gem 'activeadmin' ,'~> 1.3.0'
 gem 'carrierwave', '~> 1.0'
 gem 'pg'
+gem 'commontator', '~> 4.11.1'
