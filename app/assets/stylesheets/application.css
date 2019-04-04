@@ -3,5 +3,6 @@
 *= require_tree .
 *= require_self
 *= require commontator/application
+//= stub active_admin
 
 */

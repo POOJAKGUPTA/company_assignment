@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
   
-  resources :posts
+  resources :posts do 
+                    resources :comments
+                  end
+
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :users
-  resources :users
-                      
+
+  resources :users 
   resources :companies
   resources :places
   resources :nodes

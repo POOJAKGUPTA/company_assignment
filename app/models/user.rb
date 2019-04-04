@@ -8,8 +8,14 @@ class User < ApplicationRecord
 
     belongs_to :city
     belongs_to :company
+
+    
    
 
    acts_as_commontator
+
+   def name
+   	self.first_name + " " + self.last_name
+   end
 
 end
