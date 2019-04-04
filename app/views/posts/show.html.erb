@@ -10,6 +10,8 @@
   <%= @post.user.first_name %>
 </p>
 
+ <!-- Form For Comments. -->
+
 <h2>Add a comment:</h2>
 
 <%= form_with(model: [ @post, @post.comments.build ], local: true) do |form| %>
@@ -31,11 +33,18 @@
 <% end %>
 
 
+
  <h2>Comments</h2>
-<% @post.comments.each do |comment| %>
+ <% @post.comments.each do |comment| %>
+
+ 
   <p>
     <strong>Commenter:</strong>
     <%= comment.user.try(:name) %>
+    <div id="poojak<%= comment.id %>"> 
+    <%= render partial: "likes/like", locals: {comment: comment } %>	
+    </div>
+    
   </p>
  
   <p>

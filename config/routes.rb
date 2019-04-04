@@ -19,6 +19,11 @@ Rails.application.routes.draw do
   resources :user_regions
   root 'welcome#new'
   get '/profile' =>  'users#profile', as: :profile
-  get '/poojak' =>  'users#my_all_users', as: :my_all_users  
+  get '/poojak' =>  'users#my_all_users', as: :my_all_users 
+
+
+    post '/likes' => 'likes#create', as: :like_create
+    post '/dislikes' => 'likes#dislike', as: :dislike_create
+ 
 
 end
