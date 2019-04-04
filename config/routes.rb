@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
   
   resources :posts do 
-                    resources :comments
-                  end
-
+    resources :comments
+  end
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
@@ -22,5 +21,4 @@ Rails.application.routes.draw do
   get '/profile' =>  'users#profile', as: :profile
   get '/poojak' =>  'users#my_all_users', as: :my_all_users  
 
-  mount Commontator::Engine => '/commontator'# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
